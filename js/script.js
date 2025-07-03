@@ -1,4 +1,3 @@
-// Mostra uma saudação com base no horário do dia
 document.addEventListener("DOMContentLoaded", function () {
   const hora = new Date().getHours();
   let saudacao = "Olá!";
@@ -9,12 +8,29 @@ document.addEventListener("DOMContentLoaded", function () {
   if (saudacaoEl) saudacaoEl.innerText = saudacao + " Bem-vindo ao meu portfólio!";
 });
 
-// Alterna o tema do site entre claro e escuro
 function alternarTema() {
   document.body.classList.toggle("escuro");
 }
 
-// Validação do formulário de contato
+document.addEventListener("DOMContentLoaded", function () {
+  const temaSalvo = localStorage.getItem("tema");
+  if (temaSalvo === "escuro") {
+    document.body.classList.add("escuro");
+  }
+  const hora = new Date().getHours();
+  let saudacao = "Olá!";
+  if (hora < 12) saudacao = "Bom dia!";
+  else if (hora < 18) saudacao = "Boa tarde!";
+  else saudacao = "Boa noite!";
+  const saudacaoEl = document.getElementById("saudacao");
+  if (saudacaoEl) saudacaoEl.innerText = saudacao + " Bem-vindo ao meu portfólio!";
+});
+
+function alternarTema() {
+  const escuroAtivo = document.body.classList.toggle("escuro");
+  localStorage.setItem("tema", escuroAtivo ? "escuro" : "claro");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   if (form) {
@@ -32,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Animação simples no título
 document.addEventListener("DOMContentLoaded", function () {
   const titulo = document.querySelector("h1");
   if (titulo) {
