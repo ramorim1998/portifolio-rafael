@@ -6,33 +6,66 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Sobre mim</a></li>
-      <li><a href="formacao.html">Formação</a></li>
-      <li><a href="portfolio.html">Portfólio</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
-  <button onclick="alternarTema()">🌙 Tema</button>
-</header>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Sobre mim</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <button onclick="alternarTema()">🌙 Tema</button>
+  </header>
 
   <main>
     <p id="saudacao"></p>
     <h1>Portfólio</h1>
-    <ul>
-      <li>Pokedex - Aplicativo de listagem e informações de Pokémons.</li>
-      <li>KeyValidator - Sistema para validação de chaves de jogos.</li>
-      <li>Mapas de Fortnite - Mapas personalizados e interativos desenvolvidos no Fortnite.</li>
-    </ul>
-  </main>
-  
-<footer>
-  <p>&copy; 2025 - Rafael Araújo Amorim</p>
-</footer>
 
+    <section>
+      <h2>Projetos em Desenvolvimento</h2>
+      <ul>
+        <li>
+          <strong>Sistema de Votação Online</strong><br>
+          Aplicação back-end em Spring Boot para criação de pautas, abertura de sessões e contagem de votos, integrada com verificação externa de CPF.
+        </li>
+        <li>
+          <strong>Portal de Apontamentos</strong><br>
+          Projeto Angular para gerenciamento de horas por colaborador, com filtros por mês, gráficos com ngx-charts e requisições otimizadas.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projetos Pessoais</h2>
+      <ul>
+        <li>
+          <strong>Pokedex Web</strong><br>
+          Interface SPA que consome API REST de Pokémon, com listagem, busca e exibição detalhada. Desenvolvido com HTML, CSS e JS puro.
+        </li>
+        <li>
+          <strong>KeyValidator</strong><br>
+          Validador de chaves de jogos e licenças em JS com verificação básica de formato, checksum e persistência simulada no `localStorage`.
+        </li>
+        <li>
+          <strong>Mapas de Fortnite</strong><br>
+          Criação e personalização de mapas interativos usando Verse (Unreal Engine), com scripts de jogo, lógica de missão e interações multiplayer.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>FlairTech</h2>
+      <p>
+        Microempreendimento de manutenção de PCs e celulares (software e hardware), além de consultoria em programação e segurança da informação.
+      </p>
+    </section>
+    <br>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Rafael Araújo Amorim</p>
+  </footer>
   <script src="js/script.js"></script>
 </body>
 </html>
