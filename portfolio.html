@@ -2,70 +2,107 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Portfólio - Rafael Amorim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de projetos de Rafael Amorim - APIs REST, dashboards, game dev e sistemas interativos.">
+  <title>Portfólio | Rafael Amorim</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Sobre</a></li>
+      <li><a href="formacao.html">Formação</a></li>
+      <li><a href="portfolio.html">Projetos</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+  <button id="btnTema" aria-label="Alternar tema claro/escuro">🌙 Tema</button>
+</header>
+
+<main>
+  <p id="saudacao" class="saudacao"></p>
+
+  <section>
+    <h1>Portfólio Profissional</h1>
+    <p>Projetos reais que demonstram minha experiência em backend robusto, integração de sistemas, visualização de dados e lógica aplicada.</p>
+  </section>
+
+  <section>
+    <h2>Projetos em Destaque</h2>
+
+    <div class="card">
+      <h3>🏆 Sistema de Gerenciamento de Times e Placar em Tempo Real</h3>
+      <p>API REST desenvolvida em Spring Boot para controle de equipes e atualização de placares em partidas.</p>
       <ul>
-        <li><a href="index.html">Sobre mim</a></li>
-        <li><a href="formacao.html">Formação</a></li>
-        <li><a href="portfolio.html">Portfólio</a></li>
-        <li><a href="contato.html">Contato</a></li>
+        <li>Cadastro e gerenciamento de times/jogadores</li>
+        <li>Atualização síncrona de placar</li>
+        <li>Controle de estado de partidas</li>
+        <li>Consistência e sincronização de dados</li>
       </ul>
-    </nav>
-    <button onclick="alternarTema()">🌙 Tema</button>
-  </header>
+    </div>
 
-  <main>
-    <p id="saudacao"></p>
-    <h1>Portfólio</h1>
-
-    <section>
-      <h2>Projetos em Desenvolvimento</h2>
+    <div class="card">
+      <h3>📊 Portal de Apontamentos de Horas</h3>
+      <p>Dashboard em Angular para gestão de horas trabalhadas com visualização analítica.</p>
       <ul>
-        <li>
-          <strong>Sistema de Votação Online</strong><br>
-          Aplicação back-end em Spring Boot para criação de pautas, abertura de sessões e contagem de votos, integrada com verificação externa de CPF.
-        </li>
-        <li>
-          <strong>Portal de Apontamentos</strong><br>
-          Projeto Angular para gerenciamento de horas por colaborador, com filtros por mês, gráficos com ngx-charts e requisições otimizadas.
-        </li>
+        <li>Filtros por período (mensal)</li>
+        <li>Gráficos interativos com ngx-charts</li>
+        <li>Integração com API REST</li>
+        <li>Otimização de requisições</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
-      <h2>Projetos Pessoais</h2>
+    <div class="card">
+      <h3>🎮 Sistemas Interativos em Fortnite (Verse)</h3>
+      <p>Desenvolvimento de mecânicas multiplayer e lógica de eventos dentro do Fortnite Creative.</p>
       <ul>
-        <li>
-          <strong>Pokedex Web</strong><br>
-          Interface SPA que consome API REST de Pokémon, com listagem, busca e exibição detalhada. Desenvolvido com HTML, CSS e JS puro.
-        </li>
-        <li>
-          <strong>KeyValidator</strong><br>
-          Validador de chaves de jogos e licenças em JS com verificação básica de formato, checksum e persistência simulada no `localStorage`.
-        </li>
-        <li>
-          <strong>Mapas de Fortnite</strong><br>
-          Criação e personalização de mapas interativos usando Verse (Unreal Engine), com scripts de jogo, lógica de missão e interações multiplayer.
-        </li>
+        <li>Sistemas de missão e progressão</li>
+        <li>Eventos multiplayer e controle de estado</li>
+        <li>Performance e consistência em tempo real</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
-      <h2>FlairTech</h2>
-      <p>
-        Microempreendimento de manutenção de PCs e celulares (software e hardware), além de consultoria em programação e segurança da informação.
-      </p>
-    </section>
-    <br>
-  </main>
+    <div class="card">
+      <h3>🔐 KeyValidator</h3>
+      <p>Sistema de validação de chaves com regras de integridade e checksum.</p>
+      <ul>
+        <li>Validação de formato e checksum</li>
+        <li>Persistência simulada com localStorage</li>
+        <li>Lógica de verificação de dados</li>
+      </ul>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 - Rafael Araújo Amorim</p>
-  </footer>
-  <script src="js/script.js"></script>
+  <section>
+    <h2>Experiência Empreendedora</h2>
+    <div class="card">
+      <h3>💼 FlairTech</h3>
+      <p>Microempreendimento focado em manutenção de computadores e soluções tecnológicas.</p>
+      <ul>
+        <li>Diagnóstico e reparo de hardware/software</li>
+        <li>Remoção de vírus e otimização de sistemas</li>
+        <li>Consultoria em programação e segurança</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tecnologias Utilizadas</h2>
+    <ul class="tech-list">
+      <li>Java | Spring Boot | JPA</li>
+      <li>Angular | TypeScript | HTML5 | CSS3</li>
+      <li>Unity (C#) | Verse</li>
+      <li>Git | GitHub | Postman</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 - Rafael Araújo Amorim</p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>

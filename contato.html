@@ -2,7 +2,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Contato - Rafael Amorim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Rafael Amorim</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -10,33 +11,41 @@
 <header>
   <nav>
     <ul>
-      <li><a href="index.html">Sobre mim</a></li>
+      <li><a href="index.html">Sobre</a></li>
       <li><a href="formacao.html">Formação</a></li>
       <li><a href="portfolio.html">Portfólio</a></li>
       <li><a href="contato.html">Contato</a></li>
     </ul>
   </nav>
-  <button onclick="alternarTema()">🌙 Tema</button>
+  <button id="btnTema" aria-label="Alternar tema claro/escuro">🌙 Tema</button>
 </header>
 
-  <main>
-    <p id="saudacao"></p>
-    <h1>Contato</h1>
-    <form>
-      <label for="nome">Nome:</label><br>
-      <input type="text" id="nome" name="nome"><br><br>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" value="rafael_amorim@gmail.com"><br><br>
-      <label for="mensagem">Mensagem:</label><br>
-      <textarea id="mensagem" name="mensagem" rows="5"></textarea><br><br>
-      <input type="submit" value="Enviar">
-    </form>
-  </main>
+<main>
+  <p id="saudacao" class="saudacao"></p>
   
+  <section>
+    <h1>Vamos conversar?</h1>
+    <p>Se você tem um projeto, oportunidade ou apenas quer trocar ideias sobre tecnologia, fique à vontade para enviar uma mensagem.</p>
+    
+    <form id="formContato">
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+
+      <label for="email">E-mail profissional</label>
+      <input type="email" id="email" name="email" required placeholder="seu@email.com">
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Descreva sua ideia ou dúvida..."></textarea>
+
+      <button type="submit" class="btn-enviar">Enviar mensagem</button>
+    </form>
+  </section>
+</main>
+
 <footer>
   <p>&copy; 2025 - Rafael Araújo Amorim</p>
 </footer>
 
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

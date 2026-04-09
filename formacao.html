@@ -2,7 +2,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Formação - Rafael Amorim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formação | Rafael Amorim</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -10,41 +11,53 @@
 <header>
   <nav>
     <ul>
-      <li><a href="index.html">Sobre mim</a></li>
+      <li><a href="index.html">Sobre</a></li>
       <li><a href="formacao.html">Formação</a></li>
       <li><a href="portfolio.html">Portfólio</a></li>
       <li><a href="contato.html">Contato</a></li>
     </ul>
   </nav>
-  <button onclick="alternarTema()">🌙 Tema</button>
+  <button id="btnTema" aria-label="Alternar tema claro/escuro">🌙 Tema</button>
 </header>
 
-  <main>
-    <p id="saudacao"></p>
-    <h1>Formação</h1>
-<p>Atualmente curso <strong>Análise e Desenvolvimento de Sistemas</strong> com foco em desenvolvimento web, arquitetura de software e segurança da informação.</p>
-
-<h2>Idiomas</h2>
-<ul>
-  <li>Português: Nativo</li>
-  <li>Inglês: Intermediário (nível B1/B2)</li>
-  <li>Espanhol: Básico</li>
-  <li>Francês: Iniciante</li>
-</ul>
-
-<h2>Complementares</h2>
-<ul>
-  <li>Curso de Spring Boot (backend APIs REST)</li>
-  <li>Experiência prática com Angular, JavaScript e TypeScript</li>
-  <li>Estudos em segurança da informação (OWASP, HTTPS, criptografia básica)</li>
-</ul>
-<br>
-  </main>
+<main>
+  <p id="saudacao" class="saudacao"></p>
   
+  <section>
+    <h1>Formação Acadêmica e Complementar</h1>
+    
+    <article>
+      <h2>🎓 Graduação</h2>
+      <p><strong>Análise e Desenvolvimento de Sistemas</strong> (em andamento)<br>
+      Foco em desenvolvimento web, arquitetura de software, segurança da informação e boas práticas de engenharia de software.</p>
+    </article>
+
+    <article>
+      <h2>🌐 Idiomas</h2>
+      <ul>
+        <li>Português: Nativo</li>
+        <li>Inglês: Intermediário (B1/B2) – Leitura técnica e comunicação profissional</li>
+        <li>Espanhol: Básico</li>
+        <li>Francês: Iniciante</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>📘 Cursos Complementares</h2>
+      <ul>
+        <li><strong>Spring Boot Expert</strong> – APIs REST, segurança, JPA, boas práticas</li>
+        <li><strong>Angular + TypeScript</strong> – Componentes, serviços, consumo de APIs</li>
+        <li><strong>Segurança da Informação</strong> – OWASP, HTTPS, criptografia básica</li>
+        <li><strong>Unity & C#</strong> – Lógica de jogos, eventos, física e UI</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
 <footer>
   <p>&copy; 2025 - Rafael Araújo Amorim</p>
 </footer>
 
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
