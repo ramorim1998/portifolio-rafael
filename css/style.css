@@ -75,7 +75,6 @@ body {
   font-size: 15px;
 }
 
-/* ===== SCANLINE EFFECT (sutil) ===== */
 body::before {
   content: "";
   position: fixed;
@@ -89,7 +88,6 @@ body::before {
   opacity: 0.15;
 }
 
-/* ===== HEADER / NAVBAR - Estilo terminal ===== */
 header {
   background: rgba(5, 7, 10, 0.92);
   backdrop-filter: blur(16px);
@@ -141,27 +139,34 @@ nav ul li a:hover {
   padding-left: 1.25rem;
 }
 
-/* Botão Tema - estilo switch de servidor */
-#btnTema {
+.idioma-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lang-btn {
   background: var(--bg-terminal);
   border: 1px solid var(--border-medium);
   color: var(--text-terminal);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  padding: 0.4rem 1rem;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.15s ease;
-  letter-spacing: 0.5px;
 }
 
-#btnTema:hover {
+.lang-btn.active {
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
-  box-shadow: 0 0 6px var(--glow-cyan);
+  background: rgba(0, 212, 170, 0.1);
 }
 
-/* ===== MAIN ===== */
+.lang-btn:hover:not(.active) {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
 main {
   flex: 1;
   max-width: 1100px;
@@ -170,7 +175,6 @@ main {
   width: 100%;
 }
 
-/* Saudação - estilo prompt de terminal */
 .saudacao {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -189,7 +193,6 @@ main {
   color: var(--text-muted);
 }
 
-/* Typography - Títulos com estilo de sistema */
 h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -251,7 +254,6 @@ h3::before {
   font-weight: 400;
 }
 
-/* ===== CARDS - estilo "dashboard de monitoramento" ===== */
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -290,7 +292,6 @@ h3::before {
   font-size: 0.85rem;
 }
 
-/* ===== LISTAS - estilo ls -la ===== */
 ul, .tech-list {
   list-style: none;
   padding-left: 0;
@@ -313,63 +314,6 @@ ul li::before, .tech-list li::before {
   font-size: 0.7rem;
 }
 
-/* Tech tags - estilo badges de servidor */
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0;
-}
-
-.tech-tag {
-  background: rgba(0, 212, 170, 0.08);
-  border: 1px solid rgba(0, 212, 170, 0.2);
-  color: var(--accent-cyan);
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  padding: 0.2rem 0.7rem;
-  border-radius: 3px;
-  letter-spacing: 0.3px;
-}
-
-.tech-tag::before {
-  content: "⎈ ";
-  font-size: 0.6rem;
-}
-
-/* ===== BLOCO DE CÓDIGO (diferencial nerd) ===== */
-.code-block {
-  background: var(--bg-terminal);
-  border: 1px solid var(--border-medium);
-  border-radius: 6px;
-  padding: 1.25rem;
-  margin: 1.5rem 0;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  overflow-x: auto;
-  position: relative;
-}
-
-.code-block::before {
-  content: "─────[ EXECUTION LOG ]─────";
-  position: absolute;
-  top: -10px;
-  left: 1rem;
-  background: var(--bg-terminal);
-  padding: 0 0.5rem;
-  font-size: 0.6rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-}
-
-.code-block pre {
-  color: var(--text-terminal);
-  margin: 0;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-/* ===== FORMULÁRIO - estilo input de terminal ===== */
 form {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -414,90 +358,56 @@ input:focus, textarea:focus {
   box-shadow: 0 0 0 2px var(--glow-cyan);
 }
 
-.btn-enviar, button[type="submit"] {
+.btn-enviar, button[type="submit"], .salvar-link-btn {
   background: transparent;
   border: 1px solid var(--accent-cyan);
   color: var(--accent-cyan);
   font-family: var(--font-mono);
   font-weight: 500;
-  padding: 0.7rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   transition: all 0.15s ease;
-  width: auto;
   display: inline-block;
 }
 
-.btn-enviar:hover, button[type="submit"]:hover {
+.btn-enviar:hover, button[type="submit"]:hover, .salvar-link-btn:hover {
   background: var(--glow-cyan);
   box-shadow: 0 0 8px var(--glow-cyan);
 }
 
-/* ===== BOTÕES DE AÇÃO ===== */
-.button-group {
+.projeto-link-container {
+  margin-top: 1rem;
   display: flex;
-  gap: 1rem;
-  margin: 2rem 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.btn-primary {
-  background: transparent;
+.github-link-input {
+  flex: 2;
+  min-width: 200px;
+  margin-bottom: 0;
+  font-size: 0.7rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.github-link-display {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent-cyan);
+  text-decoration: none;
   border: 1px solid var(--accent-cyan);
-  color: var(--accent-cyan);
-  font-family: var(--font-mono);
-  font-weight: 500;
-  padding: 0.7rem 1.75rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
   transition: all 0.15s ease;
 }
 
-.btn-secondary {
-  background: transparent;
-  border: 1px solid var(--text-muted);
-  color: var(--text-secondary);
-  font-family: var(--font-mono);
-  font-weight: 500;
-  padding: 0.7rem 1.75rem;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.15s ease;
-}
-
-.btn-primary:hover, .btn-secondary:hover {
-  transform: translateY(-1px);
-}
-
-.btn-primary:hover {
+.github-link-display:hover {
   background: var(--glow-cyan);
-  box-shadow: 0 0 8px var(--glow-cyan);
 }
 
-.btn-secondary:hover {
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
-}
-
-/* ===== QUOTE / BLOCKQUOTE ===== */
-blockquote {
-  background: var(--bg-terminal);
-  border-left: 3px solid var(--accent-cyan);
-  padding: 1.25rem;
-  margin: 2rem 0;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--text-terminal);
-}
-
-blockquote::before {
-  content: "// ";
-  color: var(--text-muted);
-}
-
-/* ===== FOOTER - estilo linha de comando ===== */
 footer {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-subtle);
@@ -515,7 +425,6 @@ footer::before {
   opacity: 0.5;
 }
 
-/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -535,21 +444,8 @@ footer::before {
   h1 {
     font-size: 2rem;
   }
-
-  .button-group {
-    flex-direction: column;
-  }
-
-  .btn-primary, .btn-secondary {
-    text-align: center;
-  }
-
-  form {
-    padding: 1.25rem;
-  }
 }
 
-/* ===== SCROLLBAR - estilo monitor de servidor ===== */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

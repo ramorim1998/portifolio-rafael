@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formação acadêmica e cursos complementares de Rafael Amorim - Análise e Desenvolvimento de Sistemas, Inglês, Spring Boot, Angular.">
+  <meta name="keywords" content="Formação, Cursos, Spring Boot, Angular, Unity, Inglês, Rafael Amorim">
+  <meta name="author" content="Rafael Araújo Amorim">
   <title>Formação | Rafael Amorim</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,43 +14,47 @@
 <header>
   <nav>
     <ul>
-      <li><a href="index.html">Sobre</a></li>
-      <li><a href="formacao.html">Formação</a></li>
-      <li><a href="portfolio.html">Portfólio</a></li>
-      <li><a href="contato.html">Contato</a></li>
+      <li><a href="index.html" data-i18n="nav-sobre">Sobre</a></li>
+      <li><a href="formacao.html" data-i18n="nav-formacao">Formação</a></li>
+      <li><a href="portfolio.html" data-i18n="nav-portfolio">Portfólio</a></li>
+      <li><a href="contato.html" data-i18n="nav-contato">Contato</a></li>
     </ul>
   </nav>
+  <div class="idioma-selector">
+    <button class="lang-btn active" data-lang="pt">PT</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
 </header>
 
 <main>
   <p id="saudacao" class="saudacao"></p>
   
   <section>
-    <h1>Formação Acadêmica e Complementar</h1>
+    <h1 data-i18n="formacao-titulo">Formação Acadêmica e Complementar</h1>
     
     <article>
-      <h2>🎓 Graduação</h2>
-      <p><strong>Análise e Desenvolvimento de Sistemas</strong> (em andamento)<br>
+      <h2 data-i18n="formacao-graduacao-titulo">🎓 Graduação</h2>
+      <p data-i18n="formacao-graduacao-desc"><strong>Análise e Desenvolvimento de Sistemas</strong> (em andamento)<br>
       Foco em desenvolvimento web, arquitetura de software, segurança da informação e boas práticas de engenharia de software.</p>
     </article>
 
     <article>
-      <h2>🌐 Idiomas</h2>
+      <h2 data-i18n="formacao-idiomas-titulo">🌐 Idiomas</h2>
       <ul>
-        <li>Português: Nativo</li>
-        <li>Inglês: Intermediário (B1/B2) – Leitura técnica e comunicação profissional</li>
-        <li>Espanhol: Básico</li>
-        <li>Francês: Iniciante</li>
+        <li data-i18n="formacao-idioma1">Português: Nativo</li>
+        <li data-i18n="formacao-idioma2">Inglês: Intermediário (B1/B2) – Leitura técnica e comunicação profissional</li>
+        <li data-i18n="formacao-idioma3">Espanhol: Básico</li>
+        <li data-i18n="formacao-idioma4">Francês: Iniciante</li>
       </ul>
     </article>
 
     <article>
-      <h2>📘 Cursos Complementares</h2>
+      <h2 data-i18n="formacao-cursos-titulo">📘 Cursos Complementares</h2>
       <ul>
-        <li><strong>Spring Boot Expert</strong> – APIs REST, segurança, JPA, boas práticas</li>
-        <li><strong>Angular + TypeScript</strong> – Componentes, serviços, consumo de APIs</li>
-        <li><strong>Segurança da Informação</strong> – OWASP, HTTPS, criptografia básica</li>
-        <li><strong>Unity & C#</strong> – Lógica de jogos, eventos, física e UI</li>
+        <li data-i18n="formacao-curso1"><strong>Spring Boot Expert</strong> – APIs REST, segurança, JPA, boas práticas</li>
+        <li data-i18n="formacao-curso2"><strong>Angular + TypeScript</strong> – Componentes, serviços, consumo de APIs</li>
+        <li data-i18n="formacao-curso3"><strong>Segurança da Informação</strong> – OWASP, HTTPS, criptografia básica</li>
+        <li data-i18n="formacao-curso4"><strong>Unity & C#</strong> – Lógica de jogos, eventos, física e UI</li>
       </ul>
     </article>
   </section>

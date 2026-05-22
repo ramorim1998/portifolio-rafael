@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfólio de projetos de Rafael Amorim - APIs REST, dashboards, game dev e sistemas interativos.">
+  <meta name="keywords" content="Portfólio, Projetos, GitHub, Spring Boot, Angular, Unity, Verse, Rafael Amorim">
+  <meta name="author" content="Rafael Araújo Amorim">
   <title>Portfólio | Rafael Amorim</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,84 +14,112 @@
 <header>
   <nav>
     <ul>
-      <li><a href="index.html">Sobre</a></li>
-      <li><a href="formacao.html">Formação</a></li>
-      <li><a href="portfolio.html">Projetos</a></li>
-      <li><a href="contato.html">Contato</a></li>
+      <li><a href="index.html" data-i18n="nav-sobre">Sobre</a></li>
+      <li><a href="formacao.html" data-i18n="nav-formacao">Formação</a></li>
+      <li><a href="portfolio.html" data-i18n="nav-portfolio">Projetos</a></li>
+      <li><a href="contato.html" data-i18n="nav-contato">Contato</a></li>
     </ul>
   </nav>
-  <button id="btnTema" aria-label="Alternar tema claro/escuro">🌙 Tema</button>
+  <div class="idioma-selector">
+    <button class="lang-btn active" data-lang="pt">PT</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
 </header>
 
 <main>
   <p id="saudacao" class="saudacao"></p>
 
   <section>
-    <h1>Portfólio Profissional</h1>
-    <p>Projetos reais que demonstram minha experiência em backend robusto, integração de sistemas, visualização de dados e lógica aplicada.</p>
+    <h1 data-i18n="portfolio-titulo">Portfólio Profissional</h1>
+    <p data-i18n="portfolio-desc">Projetos reais que demonstram minha experiência em backend robusto, integração de sistemas, visualização de dados e lógica aplicada.</p>
   </section>
 
   <section>
-    <h2>Projetos em Destaque</h2>
+    <h2 data-i18n="portfolio-destaques">Projetos em Destaque</h2>
 
-    <div class="card">
-      <h3>🏆 Sistema de Gerenciamento de Times e Placar em Tempo Real</h3>
-      <p>API REST desenvolvida em Spring Boot para controle de equipes e atualização de placares em partidas.</p>
-      <ul>
-        <li>Cadastro e gerenciamento de times/jogadores</li>
-        <li>Atualização síncrona de placar</li>
-        <li>Controle de estado de partidas</li>
-        <li>Consistência e sincronização de dados</li>
-      </ul>
-    </div>
+    <a href="https://github.com/ramorim1998/gerador-times-back" target="_blank" class="card-link">
+      <div class="card" data-projeto="sistema-times">
+        <h3>🏆 <span data-i18n="proj1-titulo">Sistema de Gerenciamento de Times e Placar em Tempo Real</span></h3>
+        <p data-i18n="proj1-desc">API REST desenvolvida em Spring Boot para controle de equipes e atualização de placares em partidas.</p>
+        <ul>
+          <li data-i18n="proj1-item1">Cadastro e gerenciamento de times/jogadores</li>
+          <li data-i18n="proj1-item2">Atualização síncrona de placar</li>
+          <li data-i18n="proj1-item3">Controle de estado de partidas</li>
+          <li data-i18n="proj1-item4">Consistência e sincronização de dados</li>
+        </ul>
+        <div class="github-badge">🔗 GitHub</div>
+      </div>
+    </a>
 
-    <div class="card">
-      <h3>📊 Portal de Apontamentos de Horas</h3>
-      <p>Dashboard em Angular para gestão de horas trabalhadas com visualização analítica.</p>
-      <ul>
-        <li>Filtros por período (mensal)</li>
-        <li>Gráficos interativos com ngx-charts</li>
-        <li>Integração com API REST</li>
-        <li>Otimização de requisições</li>
-      </ul>
-    </div>
+    <a href="https://github.com/ramorim1998/gerador-times-front" target="_blank" class="card-link">
+      <div class="card" data-projeto="portal-horas">
+        <h3>📊 <span data-i18n="proj2-titulo">Portal de Apontamentos de Horas - Frontend</span></h3>
+        <p data-i18n="proj2-desc">Dashboard em Angular para gestão de horas trabalhadas com visualização analítica.</p>
+        <ul>
+          <li data-i18n="proj2-item1">Filtros por período (mensal)</li>
+          <li data-i18n="proj2-item2">Gráficos interativos com ngx-charts</li>
+          <li data-i18n="proj2-item3">Integração com API REST</li>
+          <li data-i18n="proj2-item4">Otimização de requisições</li>
+        </ul>
+        <div class="github-badge">🔗 GitHub</div>
+      </div>
+    </a>
 
-    <div class="card">
-      <h3>🎮 Sistemas Interativos em Fortnite (Verse)</h3>
-      <p>Desenvolvimento de mecânicas multiplayer e lógica de eventos dentro do Fortnite Creative.</p>
-      <ul>
-        <li>Sistemas de missão e progressão</li>
-        <li>Eventos multiplayer e controle de estado</li>
-        <li>Performance e consistência em tempo real</li>
-      </ul>
-    </div>
+    <a href="https://github.com/ramorim1998/key-validator-front" target="_blank" class="card-link">
+      <div class="card" data-projeto="keyvalidator-front">
+        <h3>🔐 <span data-i18n="proj3-titulo">KeyValidator - Frontend</span></h3>
+        <p data-i18n="proj3-desc">Interface web para sistema de validação de chaves com regras de integridade e checksum.</p>
+        <ul>
+          <li data-i18n="proj3-item1">Interface responsiva para validação de chaves</li>
+          <li data-i18n="proj3-item2">Comunicação com API backend</li>
+          <li data-i18n="proj3-item3">Feedback visual de validação</li>
+          <li data-i18n="proj3-item4">Design system consistente</li>
+        </ul>
+        <div class="github-badge">🔗 GitHub</div>
+      </div>
+    </a>
 
-    <div class="card">
-      <h3>🔐 KeyValidator</h3>
-      <p>Sistema de validação de chaves com regras de integridade e checksum.</p>
+    <a href="https://github.com/ramorim1998/key-validator-back" target="_blank" class="card-link">
+      <div class="card" data-projeto="keyvalidator-back">
+        <h3>⚙️ <span data-i18n="proj4-titulo">KeyValidator - Backend</span></h3>
+        <p data-i18n="proj4-desc">API REST para validação de chaves com regras de integridade e checksum.</p>
+        <ul>
+          <li data-i18n="proj4-item1">Validação de formato e checksum</li>
+          <li data-i18n="proj4-item2">Arquitetura RESTful</li>
+          <li data-i18n="proj4-item3">Regras de validação robustas</li>
+          <li data-i18n="proj4-item4">Tratamento de erros consistente</li>
+        </ul>
+        <div class="github-badge">🔗 GitHub</div>
+      </div>
+    </a>
+
+    <div class="card" data-projeto="fortnite">
+      <h3>🎮 <span data-i18n="proj5-titulo">Sistemas Interativos em Fortnite (Verse)</span></h3>
+      <p data-i18n="proj5-desc">Desenvolvimento de mecânicas multiplayer e lógica de eventos dentro do Fortnite Creative.</p>
       <ul>
-        <li>Validação de formato e checksum</li>
-        <li>Persistência simulada com localStorage</li>
-        <li>Lógica de verificação de dados</li>
+        <li data-i18n="proj5-item1">Sistemas de missão e progressão</li>
+        <li data-i18n="proj5-item2">Eventos multiplayer e controle de estado</li>
+        <li data-i18n="proj5-item3">Performance e consistência em tempo real</li>
       </ul>
+      <div class="github-badge em-breve">📌 Em breve no GitHub</div>
     </div>
   </section>
 
   <section>
-    <h2>Experiência Empreendedora</h2>
+    <h2 data-i18n="portfolio-empreendedor">Experiência Empreendedora</h2>
     <div class="card">
       <h3>💼 FlairTech</h3>
-      <p>Microempreendimento focado em manutenção de computadores e soluções tecnológicas.</p>
+      <p data-i18n="flairtech-desc">Microempreendimento focado em manutenção de computadores e soluções tecnológicas.</p>
       <ul>
-        <li>Diagnóstico e reparo de hardware/software</li>
-        <li>Remoção de vírus e otimização de sistemas</li>
-        <li>Consultoria em programação e segurança</li>
+        <li data-i18n="flairtech-item1">Diagnóstico e reparo de hardware/software</li>
+        <li data-i18n="flairtech-item2">Remoção de vírus e otimização de sistemas</li>
+        <li data-i18n="flairtech-item3">Consultoria em programação e segurança</li>
       </ul>
     </div>
   </section>
 
   <section>
-    <h2>Tecnologias Utilizadas</h2>
+    <h2 data-i18n="portfolio-tecnologias">Tecnologias Utilizadas</h2>
     <ul class="tech-list">
       <li>Java | Spring Boot | JPA</li>
       <li>Angular | TypeScript | HTML5 | CSS3</li>

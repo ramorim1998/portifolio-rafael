@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com Rafael Amorim para projetos, oportunidades ou dúvidas sobre tecnologia.">
+  <meta name="keywords" content="Contato, E-mail, Mensagem, Rafael Amorim, Desenvolvedor">
+  <meta name="author" content="Rafael Araújo Amorim">
   <title>Contato | Rafael Amorim</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,32 +14,36 @@
 <header>
   <nav>
     <ul>
-      <li><a href="index.html">Sobre</a></li>
-      <li><a href="formacao.html">Formação</a></li>
-      <li><a href="portfolio.html">Portfólio</a></li>
-      <li><a href="contato.html">Contato</a></li>
+      <li><a href="index.html" data-i18n="nav-sobre">Sobre</a></li>
+      <li><a href="formacao.html" data-i18n="nav-formacao">Formação</a></li>
+      <li><a href="portfolio.html" data-i18n="nav-portfolio">Portfólio</a></li>
+      <li><a href="contato.html" data-i18n="nav-contato">Contato</a></li>
     </ul>
   </nav>
+  <div class="idioma-selector">
+    <button class="lang-btn active" data-lang="pt">PT</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
 </header>
 
 <main>
   <p id="saudacao" class="saudacao"></p>
   
   <section>
-    <h1>Vamos conversar?</h1>
-    <p>Se você tem um projeto, oportunidade ou apenas quer trocar ideias sobre tecnologia, fique à vontade para enviar uma mensagem.</p>
+    <h1 data-i18n="contato-titulo">Vamos conversar?</h1>
+    <p data-i18n="contato-desc">Se você tem um projeto, oportunidade ou apenas quer trocar ideias sobre tecnologia, fique à vontade para enviar uma mensagem.</p>
     
     <form id="formContato">
-      <label for="nome">Nome completo</label>
+      <label for="nome" data-i18n="contato-label-nome">Nome completo</label>
       <input type="text" id="nome" name="nome" required placeholder="Seu nome">
 
-      <label for="email">E-mail profissional</label>
+      <label for="email" data-i18n="contato-label-email">E-mail profissional</label>
       <input type="email" id="email" name="email" required placeholder="seu@email.com">
 
-      <label for="mensagem">Mensagem</label>
+      <label for="mensagem" data-i18n="contato-label-mensagem">Mensagem</label>
       <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Descreva sua ideia ou dúvida..."></textarea>
 
-      <button type="submit" class="btn-enviar">Enviar mensagem</button>
+      <button type="submit" class="btn-enviar" data-i18n="contato-btn-enviar">Enviar mensagem</button>
     </form>
   </section>
 </main>

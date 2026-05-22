@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfólio profissional de Rafael Araújo Amorim - Desenvolvedor Fullstack com foco em Java, Spring Boot e Angular.">
+  <meta name="keywords" content="Desenvolvedor Fullstack, Java, Spring Boot, Angular, Portfólio, Rafael Amorim">
+  <meta name="author" content="Rafael Araújo Amorim">
+  <meta property="og:title" content="Rafael Amorim | Desenvolvedor Fullstack">
+  <meta property="og:description" content="Portfólio profissional com projetos em Java, Spring Boot e Angular.">
+  <meta property="og:type" content="website">
   <title>Rafael Amorim | Sobre</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,42 +17,46 @@
 <header>
   <nav>
     <ul>
-      <li><a href="index.html">Sobre</a></li>
-      <li><a href="formacao.html">Formação</a></li>
-      <li><a href="portfolio.html">Portfólio</a></li>
-      <li><a href="contato.html">Contato</a></li>
+      <li><a href="index.html" data-i18n="nav-sobre">Sobre</a></li>
+      <li><a href="formacao.html" data-i18n="nav-formacao">Formação</a></li>
+      <li><a href="portfolio.html" data-i18n="nav-portfolio">Portfólio</a></li>
+      <li><a href="contato.html" data-i18n="nav-contato">Contato</a></li>
     </ul>
   </nav>
+  <div class="idioma-selector">
+    <button class="lang-btn active" data-lang="pt">PT</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
 </header>
 
 <main>
   <p id="saudacao" class="saudacao"></p>
   
   <section>
-    <h1>Rafael Araújo Amorim</h1>
-    <p class="subtitle">Desenvolvedor Fullstack | Backend Java | Sistemas Interativos</p>
+    <h1 data-i18n="sobre-titulo">Rafael Araújo Amorim</h1>
+    <p class="subtitle" data-i18n="sobre-subtitulo">Desenvolvedor Fullstack | Backend Java | Sistemas Interativos</p>
     
-    <p>Sou desenvolvedor com sólida experiência prática em <strong>Java, Spring Boot e Angular</strong>, atuando na construção de APIs REST, integração de sistemas e desenvolvimento de dashboards com visualização de dados. Minha abordagem combina arquitetura em camadas, validação robusta e foco em soluções funcionais e seguras.</p>
+    <p data-i18n="sobre-desc1">Sou desenvolvedor com sólida experiência prática em <strong>Java, Spring Boot e Angular</strong>, atuando na construção de APIs REST, integração de sistemas e desenvolvimento de dashboards com visualização de dados. Minha abordagem combina arquitetura em camadas, validação robusta e foco em soluções funcionais e seguras.</p>
 
-    <p>Paralelamente, possuo experiência em <strong>game development com Unity (C#) e Fortnite Creative (Verse)</strong>, o que fortalece meu raciocínio lógico, modelagem de estados e programação orientada a eventos — um diferencial aplicado também a sistemas corporativos.</p>
+    <p data-i18n="sobre-desc2">Paralelamente, possuo experiência em <strong>game development com Unity (C#) e Fortnite Creative (Verse)</strong>, o que fortalece meu raciocínio lógico, modelagem de estados e programação orientada a eventos — um diferencial aplicado também a sistemas corporativos.</p>
 
-    <p>Como empreendedor à frente da <strong>FlairTech</strong>, presto consultoria e manutenção de computadores, desenvolvendo habilidades práticas de atendimento ao cliente, diagnóstico de problemas e soluções de otimização de sistemas.</p>
+    <p data-i18n="sobre-desc3">Como empreendedor à frente da <strong>FlairTech</strong>, presto consultoria e manutenção de computadores, desenvolvendo habilidades práticas de atendimento ao cliente, diagnóstico de problemas e soluções de otimização de sistemas.</p>
   </section>
 
   <section>
-    <h2>Competências Técnicas</h2>
+    <h2 data-i18n="sobre-competencias">Competências Técnicas</h2>
     <ul>
-      <li><strong>Backend:</strong> Java, Spring Boot, REST APIs, JPA/Hibernate</li>
-      <li><strong>Frontend:</strong> Angular, TypeScript, HTML5, CSS3</li>
-      <li><strong>Game Dev:</strong> Unity (C#), Verse (Fortnite Creative)</li>
-      <li><strong>Ferramentas:</strong> Git, GitHub, Postman, VS Code</li>
-      <li><strong>Conceitos:</strong> Integração de sistemas, validação de dados, lógica de negócio, visualização de dados</li>
+      <li data-i18n="sobre-comp1"><strong>Backend:</strong> Java, Spring Boot, REST APIs, JPA/Hibernate</li>
+      <li data-i18n="sobre-comp2"><strong>Frontend:</strong> Angular, TypeScript, HTML5, CSS3</li>
+      <li data-i18n="sobre-comp3"><strong>Game Dev:</strong> Unity (C#), Verse (Fortnite Creative)</li>
+      <li data-i18n="sobre-comp4"><strong>Ferramentas:</strong> Git, GitHub, Postman, VS Code</li>
+      <li data-i18n="sobre-comp5"><strong>Conceitos:</strong> Integração de sistemas, validação de dados, lógica de negócio, visualização de dados</li>
     </ul>
   </section>
 
   <section>
-    <h2>Perfil Pessoal</h2>
-    <p>Valorizo a evolução contínua, tanto técnica quanto pessoal. Tenho mentalidade prática e orientada a resultados, aprendo rápido e aplico conhecimento em problemas reais. Fora da programação, pratico musculação e Muay Thai, cultivo interesses em mecânica, cultura nerd e criação de experiências interativas.</p>
+    <h2 data-i18n="sobre-perfil">Perfil Pessoal</h2>
+    <p data-i18n="sobre-perfil-desc">Valorizo a evolução contínua, tanto técnica quanto pessoal. Tenho mentalidade prática e orientada a resultados, aprendo rápido e aplico conhecimento em problemas reais. Fora da programação, pratico musculação e Muay Thai, cultivo interesses em mecânica, cultura nerd e criação de experiências interativas.</p>
   </section>
 </main>
 
